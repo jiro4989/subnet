@@ -1,6 +1,6 @@
 import unittest
 
-include APPNAME
+include subnet
 
 suite "suite":
   test "test":
