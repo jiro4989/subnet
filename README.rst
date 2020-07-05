@@ -4,7 +4,7 @@ subnet
 
 |nimble-version| |nimble-install| |gh-actions|
 
-``subnet`` prints subnet mask.
+``subnet`` prints subnet mask in human readable.
 
 .. contents:: Table of contents
 

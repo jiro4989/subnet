@@ -2,7 +2,7 @@
 
 version       = "1.0.0"
 author        = "jiro4989"
-description   = "Prints subnet mask"
+description   = "subnet prints subnet mask in human readable."
 license       = "MIT"
 srcDir        = "src"
 bin           = @["subnet"]
