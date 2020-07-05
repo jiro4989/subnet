@@ -1,8 +1,8 @@
 # Package
 
-version       = "0.1.0"
+version       = "1.0.0"
 author        = "jiro4989"
-description   = "TODO"
+description   = "Prints subnet mask"
 license       = "MIT"
 srcDir        = "src"
 bin           = @["subnet"]
@@ -11,7 +11,8 @@ binDir        = "bin"
 
 # Dependencies
 
-requires "nim >= 1.0.6"
+requires "nim >= 1.2.4"
+requires "cligen >= 1.0.0"
 
 import os, strformat
 
