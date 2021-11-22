@@ -11,7 +11,7 @@ binDir        = "bin"
 
 # Dependencies
 
-requires "nim >= 1.2.4"
+requires "nim >= 1.6.0"
 requires "cligen >= 1.0.0"
 
 import os, strformat
