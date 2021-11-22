@@ -9,7 +9,7 @@ type
     mask*: string
 
 const
-  version = """subnet version 1.0.0
+  version = """subnet version 1.0.1
 Copyright (c) 2020 jiro4989
 Released under the MIT License.
 https://github.com/jiro4989/subnet"""
@@ -84,12 +84,16 @@ proc format(ipv4: IPv4, showIpAddress: bool, showCidr: bool,
   if showIpAddress: col.add(ipv4.address)
   if showCidr: col.add($ipv4.cidr)
   if showIpBin:
-    if useColor:
-      let bin = ipv4.bin
-      let cidr = ipv4.cidr
-      col.add("\e[31m" & bin[0..<cidr] & "\e[32m" & bin[cidr..^1] & "\e[m")
-    else:
+    when defined windows:
+      # #2 Windowsだと色の表示がバグる
       col.add(ipv4.bin)
+    else:
+      if useColor:
+        let bin = ipv4.bin
+        let cidr = ipv4.cidr
+        col.add("\e[31m" & bin[0..<cidr] & "\e[32m" & bin[cidr..^1] & "\e[m")
+      else:
+        col.add(ipv4.bin)
   if showIpBinMask: col.add(ipv4.mask)
   result = col.join(delimiter)
 
