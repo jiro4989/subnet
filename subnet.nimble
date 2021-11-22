@@ -1,6 +1,6 @@
 # Package
 
-version       = "1.0.0"
+version       = "1.0.1"
 author        = "jiro4989"
 description   = "subnet prints subnet mask in human readable."
 license       = "MIT"
